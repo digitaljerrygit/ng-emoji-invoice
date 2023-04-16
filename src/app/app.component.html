@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+  <title>Invoice</title>
+
+</head>
+
+<body>
+  <app-invoice-submission (jwFormDataChange)="jwUpdateFormData($event)"></app-invoice-submission>
+  <div class="invoice-box">
+    <app-header [jwClientData]="jwClientInfo"></app-header>
+    <app-payment-type></app-payment-type>
+    <app-task-collection [jwItems]="jwClientInfo.invoiceItems"></app-task-collection>
+    <app-invoice-summary [jwClientData]="jwClientInfo"></app-invoice-summary>
+  </div>
+
+</body>
+
+</html>

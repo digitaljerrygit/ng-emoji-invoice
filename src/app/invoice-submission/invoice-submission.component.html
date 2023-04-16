@@ -1,0 +1,7 @@
+<form class="invoice-box">
+  Item: <input type="text" name="item" style="width: 200px;" [(ngModel)]="jwFormData.item">
+  Hours: <input type="number" style="width: 60px" name="hours" min="0" [(ngModel)]="jwFormData.hoursWorked">
+  Hourly Rate: <input type="number" style="width: 60px" name="hourly rate" min="0" [(ngModel)]="jwFormData.hourlyRate">
+
+  <button (click)="jwSubmit()">Add New Entry</button>
+</form>

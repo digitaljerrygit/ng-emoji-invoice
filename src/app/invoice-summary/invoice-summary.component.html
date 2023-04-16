@@ -1,0 +1,38 @@
+<table>
+
+  <tr>
+    <td>
+      Total Hours
+    </td>
+    <td>{{jwCalculateTotalHours()}}</td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr class="subtotal">
+    <td></td>
+    <td></td>
+    <td class="align-right">Sub Total:</td>
+    <td class="align-right">
+      {{jwCalculateSubTotal() | currency:'CAD'}}
+    </td>
+  </tr>
+  <tr class="taxes">
+    <td></td>
+    <td></td>
+    <td class="align-right">Taxes ({{jwClientData.taxAmount}}%): </td>
+
+    <td class="align-right">
+      {{jwCalculateTaxes() | currency:'CAD'}}
+    </td>
+  </tr>
+
+  <tr class="total">
+    <td></td>
+    <td></td>
+    <td class="align-right"> Total:</td>
+
+    <td class="align-right">
+      {{jwCalculatePaymentTotal() | currency:'CAD'}}
+    </td>
+  </tr>
+</table>

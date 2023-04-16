@@ -1,0 +1,35 @@
+<table>
+  <tr class="heading">
+    <td colspan="3">
+      Payment Method
+    </td>
+
+    <td>
+      Payment Types Accepted
+    </td>
+  </tr>
+
+  <tr class="details">
+    <td colspan="3">
+      {{jwSelectedPaymentType}}
+    </td>
+
+    <td>
+      <select [(ngModel)]="jwSelectedPaymentType" (change)="jwSubmit()">
+        <option>
+          Bitcoin
+        </option>
+        <option>
+          Interact
+        </option>
+        <option selected>
+          Cash
+        </option>
+        <option>
+          Credit Card
+        </option>
+      </select>
+      <p *ngIf="jwSelectedPaymentType === 'Credit Card'">Sorry we do not accept AMEX</p>
+    </td>
+  </tr>
+</table>

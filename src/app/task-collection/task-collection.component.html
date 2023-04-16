@@ -1,0 +1,27 @@
+<table>
+  <tr class="heading">
+    <td>
+      Items
+    </td>
+
+    <td class="align-right">
+      Hours Worked
+    </td>
+    <td class="align-right">
+      Hourly Rate
+    </td>
+    <td class="align-right">
+      Total
+    </td>
+  </tr>
+
+  <tbody id="tableStuff">
+    <!-- use this id to show the Array in question 4a -->
+    <tr class="item" *ngFor="let invoiceItem of jwItems">
+      <td>{{invoiceItem.item}}</td>
+      <td class="align-right">{{invoiceItem.hoursWorked}}</td>
+      <td class="align-right">{{invoiceItem.hourlyRate | currency:'CAD'}}</td>
+      <td class="align-right">{{invoiceItem.hoursWorked * invoiceItem.hourlyRate | currency:'CAD'}}</td>
+    </tr>
+  </tbody>
+</table>
